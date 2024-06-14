@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AplNTVY+83nolU7jrPa4lc/wyMjAStbSlYXqTGaouwA=",
+  "Hash": "eDvfxGMIDH6VvgBZIXFJa7ySIRyFyIZQWVplv79+K1Q=",
   "Source": "MyWebApp",
   "BasePath": "_content/MyWebApp",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/lyviah/Documents/GitHub/PersonalWebsite/MyWebApp/obj/Debug/net8.0/scopedcss/projectbundle/MyWebApp.bundle.scp.css"
+    },
+    {
+      "Identity": "/Users/lyviah/Documents/GitHub/PersonalWebsite/MyWebApp/wwwroot/css/Home/Index.css",
+      "SourceId": "MyWebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/lyviah/Documents/GitHub/PersonalWebsite/MyWebApp/wwwroot/",
+      "BasePath": "_content/MyWebApp",
+      "RelativePath": "css/Home/Index.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/Home/Index.css"
     },
     {
       "Identity": "/Users/lyviah/Documents/GitHub/PersonalWebsite/MyWebApp/wwwroot/css/site.css",

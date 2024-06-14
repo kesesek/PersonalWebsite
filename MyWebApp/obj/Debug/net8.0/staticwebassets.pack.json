@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets/MyWebApp.bundle.scp.css"
     },
     {
+      "Id": "/Users/lyviah/Documents/GitHub/PersonalWebsite/MyWebApp/wwwroot/css/Home/Index.css",
+      "PackagePath": "staticwebassets/css/Home/Index.css"
+    },
+    {
       "Id": "/Users/lyviah/Documents/GitHub/PersonalWebsite/MyWebApp/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },
