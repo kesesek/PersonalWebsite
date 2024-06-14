@@ -1,10 +1,12 @@
 :root {
   --bs-body-font-family: 'Arial', 'Helvetica', sans-serif;
-  --bs-body-bg: #f8f9fa;
-  --bs-body-color: #212529;
   --bs-primary: #6246EA;
-  --bs-link-color: #6246EA;
-  --bs-link-hover-color: #6246EA;
+  --bs--white: #FFFFFE;
+  --bs--lightest--gray: #EFF0F3;
+  --bs--light--gray: #E4E5E9;
+  --bs--gray: #C0C0C0;
+  --bs--dark--gray: #9A9494;
+  --bs--black: #2B2C34;
 }
 
 html {
@@ -29,8 +31,8 @@ html {
 body {
   margin-bottom: 60px;
   font-family: var(--bs-body-font-family);
-  background-color: var(--bs-body-bg);
-  color: var(--bs-body-color);
+  background-color: var(--bs--lightest--gray);
+  color: var(--bs--black);
 }
 
 .title {
@@ -38,7 +40,7 @@ body {
 }
 
 .navbar, .footer{
-  background-color: var(--background-color);
+  background-color: var(--bs--lightest--gray);
 }
 
 .nav-link {
@@ -47,5 +49,5 @@ body {
 }
 
 .nav-link:hover {
-  color: var(--primary-color);
+  color: var(--bs-primary);
 }

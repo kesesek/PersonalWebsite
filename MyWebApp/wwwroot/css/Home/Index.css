@@ -1,0 +1,25 @@
+.home-container {
+    height: 100%;
+    width: 100%;
+    background-image: radial-gradient(circle, #cfcfcf 0.25rem, transparent 0.25rem);
+    background-size: 2.5rem 2.5rem;
+    background-repeat: repeat;
+}
+
+p {
+    color: var(--bs--dark--gray);
+    border-left: 0.2rem solid var(--bs--black);
+    padding-left: 0.7rem;
+}
+
+.custom-input {
+    border: none;
+    height: 3rem;
+    padding: 0 2rem;
+    border-radius: 0.5rem;
+    background-color: var(--bs--white);
+}
+
+.custom-input::placeholder {
+    color: var(--bs--gray);
+}
