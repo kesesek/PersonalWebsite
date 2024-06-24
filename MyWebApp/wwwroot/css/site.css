@@ -1,3 +1,14 @@
+:root {
+  --bs-body-font-family: 'Arial', 'Helvetica', sans-serif;
+  --bs-primary: #6246EA;
+  --bs--white: #FFFFFE;
+  --bs--lightest--gray: #EFF0F3;
+  --bs--light--gray: #E4E5E9;
+  --bs--gray: #C0C0C0;
+  --bs--dark--gray: #9A9494;
+  --bs--black: #2B2C34;
+}
+
 html {
   font-size: 14px;
 }
@@ -9,7 +20,7 @@ html {
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #6246EA;
 }
 
 html {
@@ -19,4 +30,24 @@ html {
 
 body {
   margin-bottom: 60px;
+  font-family: var(--bs-body-font-family);
+  background-color: var(--bs--lightest--gray);
+  color: var(--bs--black);
+}
+
+.title {
+  color: var(--bs-primary);
+}
+
+.navbar, .footer{
+  background-color: var(--bs--lightest--gray);
+}
+
+.nav-link {
+  color: var(--bs-primary);
+  background-color: var(--bs-primary);
+}
+
+.nav-link:hover {
+  color: var(--bs-primary);
 }

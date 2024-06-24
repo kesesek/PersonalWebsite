@@ -1,0 +1,105 @@
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+mono_crash.*
+
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+bin/
+obj/
+
+# SQL Server files
+*.mdf
+*.ldf
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+*.nuspec
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Web server settings
+.azure/
+.history/
+
+# Azure DevOps
+.vsts/
+
+# Coverage results
+coverage/
+*.coverage
+*.coveragexml
+*.resultset.xml
+coverage*.json
+*.lcov
+
+# Crash Reports
+*.dmp
+
+# Uncomment if using .NET Core only
+project.lock.json
+project.fragment.lock.json
+artman_output
+
+# Logs
+logs/
+*.log
+
+# NPM packages
+node_modules/
+
+# Microsoft Visual Studio Code workspace settings
+.vscode/
+.vscode/*
+
+# Tool settings
+.toolstemplates/
+
+# Tools
+*.customtoollog
+
+# Certificates
+*.pfx
+*.p12
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# ASP.NET web logs
+logs/
+
+# Entity Framework migrations
+Migrations/
+
+# Docker
+docker-compose.override.yml
+docker-compose.*.yml
+Dockerfile.*
+
+# Kubernetes
+k8s/
