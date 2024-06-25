@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - MyWebApp</title>
+    <title>@ViewData["Title"] - Lyvia.blog</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
@@ -11,19 +11,31 @@
     @RenderSection("Styles", required: false)
 </head>
 <body>
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-        <span class="fs-4 title">Lyvia.blog</span>
-      </a>
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom box-shadow">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <svg class="bi me-2" width="40" height="32">
+                <use xlink:href="#bootstrap"></use>
+            </svg>
+            <span class="fs-4 title">Lyvia</span>
+            <span class="secend-title"> .blog</span>
+        </a>
 
-      <ul class="nav nav-pills">
-        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Category</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">About Me</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Search</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Buy Me A Coffee</a></li>
-      </ul>
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Category</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About Me</a></li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M7.08332 12.75C8.3406 12.7497 9.56164 12.3288 10.552 11.5543L13.6659 14.6682L14.6674 13.6666L11.5536 10.5527C12.3285 9.56225 12.7497 8.34092 12.75 7.08332C12.75 3.95886 10.2078 1.41666 7.08332 1.41666C3.95886 1.41666 1.41666 3.95886 1.41666 7.08332C1.41666 10.2078 3.95886 12.75 7.08332 12.75ZM7.08332 2.83332C9.4272 2.83332 11.3333 4.73945 11.3333 7.08332C11.3333 9.4272 9.4272 11.3333 7.08332 11.3333C4.73945 11.3333 2.83332 9.4272 2.83332 7.08332C2.83332 4.73945 4.73945 2.83332 7.08332 2.83332Z"
+                            fill=var(--bs-primary) />
+                    </svg>
+                    Search
+                </a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">Buy Me A Coffee</a></li>
+        </ul>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -40,5 +52,7 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
+    @await Component.InvokeAsync("SearchModal")
 </body>
 </html>

@@ -1,0 +1,40 @@
+@* Search modal *@
+@* To use Bootstrap modals, it's important to note that a complete Bootstrap modal must include the following structure:
+1. modal class: The root element of the modal, indicating that this is a modal.
+2. modal-dialog class: The modal's dialog box, used for positioning and setting the width of the modal.
+3. modal-content class: The modal's content, used to contain the modal's header, body, and footer. *@
+
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="searchModalLabel">Search</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+            <label>
+                <svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 20 20" aria-hidden="true">
+                    <path
+                        d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z"
+                        stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                </svg>
+                <span>Search</span>
+            </label>
+            <input aria-autocomplete="both" aria-labelledby="docsearch-label"
+                id="docsearch-input" autocomplete="off" autocorrect="off" autocapitalize="off" enterkeyhint="search"
+                spellcheck="false" autofocus placeholder="Search docs" maxlength="64" type="search">
+            <button type="reset" title="Clear the query" aria-label="Clear the query" hidden>
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                    <path d="M10 10l5.09-5.09L10 10l5.09 5.09L10 10zm0 0L4.91 4.91 10 10l-5.09 5.09L10 10z"
+                        stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                </svg>
+            </button>
+        </form>
+        <button class="DocSearch-Cancel" type="reset" aria-label="Cancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
