@@ -6,6 +6,8 @@
 
 a {
   color: var(--bs-primary);
+  display: flex;
+  align-items: center;
 }
 
 .btn-primary {
@@ -28,7 +30,7 @@ a {
 }
 
 .box-shadow {
-  box-shadow: 0 .25rem .75rem var(--bs--black);
+  box-shadow: 0 .25rem .75rem var(--bs--light--gray);
 }
 
 button.accept-policy {
@@ -42,4 +44,14 @@ button.accept-policy {
   width: 100%;
   white-space: nowrap;
   line-height: 3.75rem;
+}
+
+.title {
+  color: var(--bs--black);
+  font-size: large;
+}
+
+.secend-title {
+  color: var(--bs-primary);
+  font-size: medium;
 }
