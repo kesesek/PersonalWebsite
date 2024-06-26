@@ -1,27 +1,30 @@
-// Namespace declaration
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using MyWebApp.Models;
+using System.Collections.Generic;
 
 namespace MyWebApp.Controllers
 {
     public class HomeController : Controller
     {
-        // Private field, used for dependency injection logger
         private readonly ILogger<HomeController> _logger;
 
-        // Constructor, initialize the controller using dependency injection mode
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }
 
-        //Action method, used to handle home page requests
         public IActionResult Index()
         {
-            return View();
+            var articles = new List<Article>
+            {
+                new Article { Id = 1, Title = "Article 1", Content = "Content of Article 1", Category = true, UpdateAt = DateTime.Now },
+                new Article { Id = 2, Title = "Article 2", Content = "Content of Article 2", Category = false, UpdateAt = DateTime.Now }
+            };
+
+            return View(articles);
         }
-        // Used to handle privacy page requests
+
         public IActionResult Privacy()
         {
             return View();
@@ -30,8 +33,6 @@ namespace MyWebApp.Controllers
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            // Create a new ErrorViewModel instance
-            // The RequestId property is set to the ID of the current activity, if one exists, or to the tracking identifier of the HTTP request otherwise.
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }

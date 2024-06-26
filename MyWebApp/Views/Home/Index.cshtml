@@ -1,27 +1,62 @@
-﻿@{
+﻿@model IEnumerable<MyWebApp.Models.Article>
+@{
     ViewData["Title"] = "Home";
 }
 @section Styles {
     <link rel="stylesheet" href="~/css/Home/Index.css" asp-append-version="true" />
 }
 
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#scroll').click(function () {
+                $('html, body').animate({
+                    scrollTop: $('#second-half').offset().top
+                }, 500);
+            });
+        });
+    </script>
+}
+
 <div class="p-5 home-container">
     <div class="top-half my-5 mx-2">
         <div class="left-part">
             <div>
-                <h1 class="display-4 fw-bold">Hi, I'm Lyvia</h1>
-                <h1 class="display-4 fw-bold">Full Stack Dev</h1>
+                <h1 class="display-4 fw-bold animate-bottom">Hi, I'm Lyvia</h1>
+                <h1 class="display-4 fw-bold animate-bottom animate-delay-1">Full Stack Dev</h1>
             </div>
             <div>
-                <p>On this blog I share tips and tricks, frameworks, projects, tutorials, etc<br>
+                <p class="animate-bottom animate-delay-2">On this blog I share tips and tricks, frameworks, projects,
+                    tutorials, etc<br>
                     Make sure you subscribe to get the latest updates
                 </p>
             </div>
-            <div class="group">
+            <div class="group animate-bottom animate-delay-3">
                 <input class="custom-input" placeholder="Enter your email here...">
                 <button>Subscribe</button>
             </div>
         </div>
         <div class="right-part"></div>
+    </div>
+
+    <div class="down-arrow">
+        <svg id="scroll" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 9L12 17L20 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </div>
+
+    <div id="second-half" class="second-half my-5 mx-2">
+        <h4 class="fw-bold">Recent updates</h4>
+        <div class="article-list">
+            <div>
+                @foreach (var article in Model)
+                {
+                    <div>
+                        <h2>@article.Title</h2>
+                        <p>@article.Content</p>
+                    </div>
+                }
+            </div>
+        </div>
     </div>
 </div>
