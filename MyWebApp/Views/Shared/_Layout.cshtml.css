@@ -5,21 +5,21 @@
 }
 
 a {
-  color: var(--bs-primary);
+  color: var(--bs--primary);
   display: flex;
   align-items: center;
 }
 
 .btn-primary {
   color: var(--bs--white);
-  background-color: var(--bs-primary);
-  border-color: var(--bs-primary);
+  background-color: var(--bs--primary);
+  border-color: var(--bs--primary);
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   color: var(--bs--white);
-  background-color: var(--bs-primary);
-  border-color: var(--bs-primary);
+  background-color: var(--bs--primary);
+  border-color: var(--bs--primary);
 }
 
 .border-top {
@@ -52,6 +52,6 @@ button.accept-policy {
 }
 
 .secend-title {
-  color: var(--bs-primary);
+  color: var(--bs--primary);
   font-size: medium;
 }

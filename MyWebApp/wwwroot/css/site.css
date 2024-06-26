@@ -1,6 +1,6 @@
 :root {
-  --bs-body-font-family: 'Arial', 'Helvetica', sans-serif;
-  --bs-primary: #6246EA;
+  --bs-body-font-family: 'Plus Jakarta Sans', sans-serif;
+  --bs--primary: #6246EA;
   --bs--white: #FFFFFE;
   --bs--lightest--gray: #EFF0F3;
   --bs--light--gray: #E4E5E9;
@@ -21,7 +21,7 @@ html {
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem var(--bs--white), 0 0 0 0.25rem var(--bs-primary);
+  box-shadow: 0 0 0 0.1rem var(--bs--white), 0 0 0 0.25rem var(--bs--primary);
 }
 
 html {
@@ -41,12 +41,12 @@ body {
 }
 
 .nav-link {
-  color: var(--bs-primary);
-  background-color: var(--bs-primary);
+  color: var(--bs--primary);
+  background-color: var(--bs--primary);
 }
 
 .nav-link:hover {
-  color: var(--bs-primary);
+  color: var(--bs--primary);
 }
 
 #searchModal {
@@ -57,7 +57,7 @@ body {
   form {
     border-radius: var(--bs--border--radius);
     align-items: center;
-    box-shadow: inset 0 0 0 2px var(--bs-primary);
+    box-shadow: inset 0 0 0 2px var(--bs--primary);
     display: flex;
     height: 56px;
     margin: 0;
@@ -68,7 +68,7 @@ body {
 
   label {
     align-items: center;
-    color: var(--bs-primary);
+    color: var(--bs--primary);
     display: flex;
     justify-content: center;
   }
