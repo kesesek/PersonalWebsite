@@ -21,6 +21,7 @@
         color: var(--bs--white);
         border: none;
         border-radius: var(--bs--border--radius);
+        font-size: small;
     }
 }
 
@@ -33,9 +34,11 @@ p {
 .custom-input {
     border: none;
     height: 3rem;
+    width: 15rem;
     padding: 0 2rem;
     border-radius: 0.5rem;
     background-color: var(--bs--white);
+    font-size: small;
 }
 
 .custom-input::placeholder {

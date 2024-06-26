@@ -41,6 +41,8 @@ body {
 }
 
 .nav-link {
+  font-size: 0.8rem;
+  font-weight: bold;
   color: var(--bs--primary);
   background-color: var(--bs--primary);
 }

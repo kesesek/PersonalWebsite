@@ -49,9 +49,11 @@ button.accept-policy {
 .title {
   color: var(--bs--black);
   font-size: large;
+  font-weight: bold;
 }
 
 .secend-title {
   color: var(--bs--primary);
   font-size: medium;
+  font-weight: bold;
 }
