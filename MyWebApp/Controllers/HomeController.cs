@@ -16,13 +16,7 @@ namespace MyWebApp.Controllers
 
         public IActionResult Index()
         {
-            var articles = new List<Article>
-            {
-                new Article { Id = 1, Title = "Article 1", Content = "Content of Article 1", Category = true, UpdateAt = DateTime.Now },
-                new Article { Id = 2, Title = "Article 2", Content = "Content of Article 2", Category = false, UpdateAt = DateTime.Now }
-            };
-
-            return View(articles);
+            return View();
         }
 
         public IActionResult Privacy()

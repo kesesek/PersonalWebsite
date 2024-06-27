@@ -1,20 +1,26 @@
 using Microsoft.AspNetCore.Mvc;
 using MyWebApp.Models;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace MyWebApp.Controllers
 {
-    public class ArticleController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class ArticleController : ControllerBase
     {
-        public IActionResult Index()
-        {
-            var articles = new List<Article>
-            {
-                new Article { Id = 1, Title = "Article 1", Content = "Content of Article 1", Category = "Tech", CreateAt = DateTime.Now },
-                new Article { Id = 2, Title = "Article 2", Content = "Content of Article 2", Category = "Health", CreateAt = DateTime.Now }
-            };
+        private readonly AppDbContext _context;
 
-            return View(articles);
+        public ArticleController(AppDbContext context)
+        {
+            _context = context;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Article>>> GetArticles()
+        {
+            return await _context.Articles.ToListAsync();
         }
     }
 }

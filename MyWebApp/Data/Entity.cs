@@ -1,33 +1,33 @@
 public class Admin
 {
-    public int Id { get; set; }
-    public required string Username { get; set; }
-    public required string EncryptedPassword { get; set; }
-    public DateTime CreatedAt { get; set; }
-    public DateTime UpdatedAt { get; set; }
+    public int id { get; set; }
+    public required string username { get; set; }
+    public required string encryptedpassword { get; set; }
+    public DateTime createdat { get; set; }
+    public DateTime updatedat { get; set; }
 }
 
 public class Article
 {
-    public int Id { get; set; }
-    public required string Title { get; set; }
-    public required string Content { get; set; }
-    public required bool Category { get; set; }
-    public DateTime CreateAt { get; set; }
-    public DateTime UpdateAt { get; set; }
+    public int id { get; set; }
+    public required string title { get; set; }
+    public required string content { get; set; }
+    public required bool category { get; set; }
+    public DateTime createat { get; set; }
+    public DateTime updateat { get; set; }
 }
 
 public class Subscriber
 {
-    public int Id { get; set; }
-    public required string Email { get; set; }
-    public DateTime SubscribedAt { get; set; }
+    public int id { get; set; }
+    public required string email { get; set; }
+    public DateTime subscribedat { get; set; }
 }
 
 public class Pic
 {
-    public int Id { get; set; }
-    public required string Path { get; set; }
-    public int ArticleId { get; set; }
-    public DateTime UploadedAt { get; set; }
+    public int id { get; set; }
+    public required string path { get; set; }
+    public int articleid { get; set; }
+    public DateTime uploadedat { get; set; }
 }

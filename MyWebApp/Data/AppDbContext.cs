@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-public class AppDbContext: DbContext 
+public class AppDbContext : DbContext
 {
     public AppDbContext(DbContextOptions<AppDbContext> options) :
 base(options)
@@ -16,6 +16,9 @@ base(options)
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-        
+        modelBuilder.Entity<Admin>().ToTable("admin");
+        modelBuilder.Entity<Article>().ToTable("article");
+        modelBuilder.Entity<Subscriber>().ToTable("subscriber");
+        modelBuilder.Entity<Pic>().ToTable("pic");
     }
 }

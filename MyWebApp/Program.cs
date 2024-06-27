@@ -3,6 +3,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddControllers();
+builder.Services.AddRazorPages();
 
 // Configure PostgreSQL database context
 builder.Services.AddDbContext<AppDbContext>(options =>
