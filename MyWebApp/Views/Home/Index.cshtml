@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MyWebApp.Models.Article>
+﻿@model IEnumerable<MyWebApp.Models.ArticleViewModel>
 @{
     ViewData["Title"] = "Home";
 }
@@ -35,6 +35,11 @@
 
     <div id="second-half" class="second-half my-5 mx-2">
         <h4 class="fw-bold">Recent updates</h4>
-        <div id="articles"></div>
+        <div id="articles">
+            @foreach (var ArticleViewModel in Model)
+            {
+                <partial name="~/Views/Shared/Components/ArticleCard/Default.cshtml" model="ArticleViewModel" />
+            }
+        </div>
     </div>
 </div>
