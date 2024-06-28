@@ -26,11 +26,11 @@ namespace MyWebApp.Controllers
             {
                 var recentArticles = await _context.Article
                                                    .OrderByDescending(a => a.UpdateAt)
-                                                   .Take(4)
+                                                   .Take(3)
                                                    .Select(a => new ArticleViewModel
                                                    {
                                                        Title = a.Title,
-                                                       Content = a.Content,
+                                                       Content = a.Content.Length > 150 ? a.Content.Substring(0, 150) + "..." : a.Content,
                                                        UpdateAt = a.UpdateAt
                                                    })
                                                    .ToListAsync();

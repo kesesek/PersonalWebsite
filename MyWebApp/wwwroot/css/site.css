@@ -98,3 +98,15 @@ body {
     padding: 2px;
   }
 }
+
+.custom-card-text {
+  max-height: 5rem;
+  font-size: small;
+  border: none;
+  color: var(--bs--gray);
+  overflow: hidden;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

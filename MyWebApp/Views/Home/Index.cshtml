@@ -33,9 +33,21 @@
         </svg>
     </div>
 
-    <div id="second-half" class="second-half my-5 mx-2">
-        <h4 class="fw-bold">Recent updates</h4>
-        <div id="articles">
+    <div id="second-half" class="second-half my-5 mx-2 ">
+        <div class="d-flex justify-content-between my-1">
+            <h4 class="fw-bold">Recent updates</h4>
+            <a class="justify-content-center cursor-pointer">
+                <sapn>View All</sapn>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708" />
+                    <path fill-rule="evenodd"
+                        d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708" />
+                </svg>
+            </a>
+        </div>
+        <div id="articles" class="row row-cols-1 row-cols-sm2 row-cols-md-3 g-3 mw-100">
             @foreach (var ArticleViewModel in Model)
             {
                 <partial name="~/Views/Shared/Components/ArticleCard/Default.cshtml" model="ArticleViewModel" />
