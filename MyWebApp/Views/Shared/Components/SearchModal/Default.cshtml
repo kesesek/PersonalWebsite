@@ -5,7 +5,7 @@
 3. modal-content class: The modal's content, used to contain the modal's header, body, and footer. *@
 
 <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog custom-modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="searchModalLabel">Search</h5>
@@ -20,12 +20,11 @@
                         stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round"
                         stroke-linejoin="round"></path>
                 </svg>
-                <span>Search</span>
             </label>
             <input aria-autocomplete="both" aria-labelledby="docsearch-label"
                 id="docsearch-input" autocomplete="off" autocorrect="off" autocapitalize="off" enterkeyhint="search"
-                spellcheck="false" autofocus placeholder="Search docs" maxlength="64" type="search">
-            <button type="reset" title="Clear the query" aria-label="Clear the query" hidden>
+                spellcheck="false" autofocus placeholder="Search for..." maxlength="64" type="search">
+            <button class="reset-btn" type="reset" title="Clear the query" aria-label="Clear the query" hidden>
                 <svg width="20" height="20" viewBox="0 0 20 20">
                     <path d="M10 10l5.09-5.09L10 10l5.09 5.09L10 10zm0 0L4.91 4.91 10 10l-5.09 5.09L10 10z"
                         stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round"
@@ -33,7 +32,6 @@
                 </svg>
             </button>
         </form>
-        <button class="DocSearch-Cancel" type="reset" aria-label="Cancel">Cancel</button>
       </div>
     </div>
   </div>

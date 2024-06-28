@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<MyWebApp.Models.ArticleViewModel>
+@{
     ViewData["Title"] = "Home";
 }
 @section Styles {
@@ -9,21 +10,48 @@
     <div class="top-half my-5 mx-2">
         <div class="left-part">
             <div>
-                <h1 class="display-4">Hi, I'm Lyvia</h1>
-                <h1 class="display-4">Full Stack Dev</h1>
+                <h1 class="display-4 fw-bold animate-bottom">Hi, I'm Lyvia</h1>
+                <h1 class="display-4 fw-bold animate-bottom animate-delay-1">Full Stack Dev</h1>
             </div>
             <div>
-                <p>On this blog I share tips and tricks, frameworks, projects, tutorials, etc<br>
+                <p class="animate-bottom animate-delay-2">On this blog I share tips and tricks, frameworks, projects,
+                    tutorials, etc<br>
                     Make sure you subscribe to get the latest updates
                 </p>
             </div>
-            <input class="custom-input" placeholder="Enter your email here...">
-            <button>Subscribe</button>
+            <div class="group animate-bottom animate-delay-3">
+                <input class="custom-input" placeholder="Enter your email here...">
+                <button>Subscribe</button>
+            </div>
         </div>
         <div class="right-part"></div>
     </div>
-    <div class="second-half">
-        <h4>Browse The Category...</h4>
-        <a>See All Category <i class="bi bi-arrow-right"></i></a>
+
+    <div class="down-arrow">
+        <svg id="scroll" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 9L12 17L20 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </div>
+
+    <div id="second-half" class="second-half my-5 mx-2 ">
+        <div class="d-flex justify-content-between my-1">
+            <h4 class="fw-bold">Recent updates</h4>
+            <a class="justify-content-center cursor-pointer">
+                <sapn>View All</sapn>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708" />
+                    <path fill-rule="evenodd"
+                        d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708" />
+                </svg>
+            </a>
+        </div>
+        <div id="articles" class="row row-cols-1 row-cols-sm2 row-cols-md-3 g-3 mw-100">
+            @foreach (var ArticleViewModel in Model)
+            {
+                <partial name="~/Views/Shared/Components/ArticleCard/Default.cshtml" model="ArticleViewModel" />
+            }
+        </div>
     </div>
 </div>

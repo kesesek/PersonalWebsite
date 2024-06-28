@@ -1,12 +1,13 @@
 :root {
-  --bs-body-font-family: 'Arial', 'Helvetica', sans-serif;
-  --bs-primary: #6246EA;
+  --bs-body-font-family: 'Plus Jakarta Sans', sans-serif;
+  --bs--primary: #6246EA;
   --bs--white: #FFFFFE;
   --bs--lightest--gray: #EFF0F3;
   --bs--light--gray: #E4E5E9;
   --bs--gray: #C0C0C0;
   --bs--dark--gray: #9A9494;
   --bs--black: #2B2C34;
+  --bs--border--radius: 0.375rem;
 }
 
 html {
@@ -20,7 +21,7 @@ html {
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem var(--bs--white), 0 0 0 0.25rem var(--bs-primary);
+  box-shadow: 0 0 0 0.1rem var(--bs--white), 0 0 0 0.25rem var(--bs--primary);
 }
 
 html {
@@ -40,10 +41,72 @@ body {
 }
 
 .nav-link {
-  color: var(--bs-primary);
-  background-color: var(--bs-primary);
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--bs--primary);
+  background-color: var(--bs--primary);
 }
 
 .nav-link:hover {
-  color: var(--bs-primary);
+  color: var(--bs--primary);
+}
+
+#searchModal {
+  .custom-modal-dialog {
+    margin-top: 8rem;
+  }
+
+  form {
+    border-radius: var(--bs--border--radius);
+    align-items: center;
+    box-shadow: inset 0 0 0 2px var(--bs--primary);
+    display: flex;
+    height: 56px;
+    margin: 0;
+    padding: 0 12px;
+    position: relative;
+    width: 100%;
+  }
+
+  label {
+    align-items: center;
+    color: var(--bs--primary);
+    display: flex;
+    justify-content: center;
+  }
+
+  #docsearch-input {
+    background: transparent;
+    border: 0;
+    color: var(--bs--black);
+    flex: 1;
+    font-size: 1.2rem;
+    height: 100%;
+    outline: none;
+    margin: 0;
+    padding: 0 0 0 8px;
+    width: 80%;
+  }
+
+  .reset-btn {
+    animation: fade-in .1s ease-in forwards;
+    appearance: none;
+    background: none;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 2px;
+  }
+}
+
+.custom-card-text {
+  max-height: 5rem;
+  font-size: small;
+  border: none;
+  color: var(--bs--gray);
+  overflow: hidden;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
