@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
+// This one is for getting data. No views should be returned here.
 namespace MyWebApp.Controllers
 {
     [Route("api/[controller]")]

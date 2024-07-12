@@ -1,0 +1,29 @@
+@model MyWebApp.Models.ArticleViewModel;
+@{
+    ViewData["Title"] = "View Articles";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/Details/Index.css" asp-append-version="true" />
+}
+
+<div class="details-cntainer">
+    <div class="main-article">
+        <h4 class="display-4 fw-bold">@Model.Title</h4>
+        <div class="article-content">@Model.Content</div>
+        <div class="article-date">
+            <p>Posted at @Model.CreateAt</p>
+            <p>Updated at @Model.UpdateAt</p>
+        </div>
+    </div>
+
+    <div class="recommended-list">
+        <h4>Recommendation</h4>
+        <div class="list-details">
+            <ul>
+                <li>Recommendation1</li>
+                <li>Recommendation2</li>
+                <li>Recommendation3</li>
+            </ul>
+        </div>
+    </div>
+</div>
