@@ -29,6 +29,7 @@ namespace MyWebApp.Controllers
                                                    .Take(3)
                                                    .Select(a => new ArticleViewModel
                                                    {
+                                                       Id = a.Id,
                                                        Title = a.Title,
                                                        Content = a.Content.Length > 150 ? a.Content.Substring(0, 150) + "..." : a.Content,
                                                        UpdateAt = a.UpdateAt
