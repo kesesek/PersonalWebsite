@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "Edit Articles";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/lib/quill/quill.snow.css" asp-append-version="true" />
+}
+<div>
+    <h1>Edit Article</h1>
+    <form method="post" action="/Article/Save">
+        <div id="editor-container" style="height: 300px;"></div>
+        <textarea name="content" style="display:none" id="content"></textarea>
+        <button type="submit">Save</button>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="~/lib/quill/quill.js" asp-append-version="true"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var quill = new Quill('#editor-container', {
+                theme: 'snow'
+            });
+
+            var form = document.querySelector('form');
+            form.onsubmit = function () {
+                var content = document.querySelector('textarea[name=content]');
+                content.value = quill.root.innerHTML;
+            };
+        });
+    </script>
+}
