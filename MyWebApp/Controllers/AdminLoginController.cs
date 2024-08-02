@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using MyWebApp.Models;
+using MyWebApp.Utility;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
@@ -17,6 +18,26 @@ public class AdminLoginController : Controller
         _context = context;
     }
 
-    // to do: admin login function
+    [HttpGet]
+    public IActionResult Index()
+    {
+        return View();
+    }
 
+    [HttpPost]
+    public IActionResult Index(string username, string password)
+    {
+        var admin = _context.Admin.SingleOrDefault(a => a.Username == username);
+
+        if (admin != null && PasswordHasher.VerifyPassword(password, admin.EncryptedPassword))
+        {
+            return RedirectToAction("Index", "Home");
+        }
+        else
+        {
+            // use viewbag to deliver message dynamically
+            ViewBag.ErrorMessage = "Invalid username or password";
+            return View();
+        }
+    }
 }
