@@ -248,3 +248,9 @@ main {
   width: 40%;
   min-width: 20rem;
 }
+
+.admin-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
